@@ -5,10 +5,10 @@ public class Cadastro {
 	private String primeiroNome;
 	private String segundoNome;
 	private String ultimoNome;
-	private String regiao;
+	private int regiao;
 	private int telefone;
 	
-	public Cadastro (String primeiroNome, String segundoNome, String ultimoNome, String regiao, int telefone)
+	public Cadastro (String primeiroNome, String segundoNome, String ultimoNome, int regiao, int telefone)
 	{
 		this.primeiroNome = primeiroNome;
 		this.segundoNome = segundoNome;
@@ -41,11 +41,11 @@ public class Cadastro {
 		this.ultimoNome = ultimoNome;
 	}
 
-	public String getRegiao() {
+	public int getRegiao() {
 		return regiao;
 	}
 
-	public void setRegiao(String regiao) {
+	public void setRegiao(int regiao) {
 		this.regiao = regiao;
 	}
 

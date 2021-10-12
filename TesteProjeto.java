@@ -7,8 +7,8 @@ public class TesteProjeto {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		Paciente pac = new Paciente(" ", " ", " ", " ", 0, " ", 000);
-		Medicos med = new Medicos(" ", " ", " ", " ", 0, " ", 0);
+		Paciente pac = new Paciente(" ", " ", " ", 0, 0, " ", 000);
+		Medicos med = new Medicos(" ", " ", " ", 0, 0, " ", 0);
 				
 		String n1,n2,n3;
 		int op, ep;
@@ -56,12 +56,17 @@ public class TesteProjeto {
 			System.out.println("\n5- Zona Oeste");
 			System.out.println("\n6- Região Metropolitana");
 			op = leia.nextInt();
+			med.setRegiao(op);
 			switch(op)
 			{
 			case 1:
 				System.out.println("\n\n====    Médicos Disponíveis     ====");
-				med.listaCentro();
+				med.listaMedicos();
+			case 2:
+				System.out.println("\n\n====    Médicos Disponíveis     ====");
+				med.listaMedicos();
 			}
+		case 2:
 		}
 
 	}

@@ -5,7 +5,7 @@ public class Paciente extends Cadastro {
 	private String cpf;
 	private int dataNascimento; 
 	
-	public Paciente (String primeiroNome, String segundoNome, String ultimoNome, String regiao, int telefone, String cpf, 
+	public Paciente (String primeiroNome, String segundoNome, String ultimoNome, int regiao, int telefone, String cpf, 
 			int dataNascimento)
 	{
 		super (primeiroNome, segundoNome, ultimoNome, regiao, telefone);

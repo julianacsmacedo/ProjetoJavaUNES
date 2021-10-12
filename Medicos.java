@@ -5,7 +5,7 @@ public class Medicos extends Cadastro{
 	private String crm;
 	private int especialidade;
 	
-	public Medicos (String primeiroNome, String segundoNome, String ultimoNome, String regiao, int telefone, String crm, 
+	public Medicos (String primeiroNome, String segundoNome, String ultimoNome, int regiao, int telefone, String crm, 
 			int especialidade)
 	{
 		super (primeiroNome, segundoNome, ultimoNome, regiao, telefone);
@@ -13,11 +13,15 @@ public class Medicos extends Cadastro{
 		this.especialidade = especialidade;
 	}
 	
-	public void listaCentro()
+	public void listaMedicos() //Lista pré-determinada
 	{
-		if(especialidade == 1)
+		if(especialidade == 1 &&  getRegiao() == 1)
 		{
 			System.out.println("Dr. André Mendes \nClínico Geral \nCentro \nContato: 4658-3922 \nCRM: 773946483");
+		}
+		if(especialidade == 1 && getRegiao() == 2)
+		{
+			System.out.println("Dr. Silvana Bezerra \nGinecologista \nCentro \nContato: 4658-3922 \nCRM: 773946483");
 		}
 	}
 
