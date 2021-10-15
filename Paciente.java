@@ -5,10 +5,10 @@ public class Paciente extends Cadastro {
 	private String cpf;
 	private int dataNascimento; 
 	
-	public Paciente (String primeiroNome, String segundoNome, String ultimoNome, int regiao, int telefone, String cpf, 
+	public Paciente (String nome, String sobrenome, int regiao, String telefone, String cpf, 
 			int dataNascimento)
 	{
-		super (primeiroNome, segundoNome, ultimoNome, regiao, telefone);
+		super (nome, sobrenome, regiao, telefone);
 		this.cpf = cpf;
 		this.dataNascimento = dataNascimento;
 	}
@@ -28,6 +28,8 @@ public class Paciente extends Cadastro {
 	public void setDataNascimento(int dataNascimento) {
 		this.dataNascimento = dataNascimento;
 	}
+	
+	
 	
 	
 }

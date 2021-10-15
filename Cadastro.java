@@ -2,43 +2,53 @@ package ProjetoJava;
 
 public class Cadastro {
 	
-	private String primeiroNome;
-	private String segundoNome;
-	private String ultimoNome;
+	private String nome;
+	private String sobrenome;
 	private int regiao;
-	private int telefone;
+	private String telefone;
 	
-	public Cadastro (String primeiroNome, String segundoNome, String ultimoNome, int regiao, int telefone)
+	public Cadastro (String nome, String sobrenome, int regiao, String telefone)
 	{
-		this.primeiroNome = primeiroNome;
-		this.segundoNome = segundoNome;
-		this.ultimoNome = ultimoNome;
+		this.nome = nome;
+		this.sobrenome = sobrenome;
 		this.regiao = regiao;
 		this.telefone = telefone;
 	}
-
-	public String getPrimeiroNome() {
-		return primeiroNome;
+	
+	public void menuEspecialidade()
+	{
+		System.out.println("\n1- Clínico Geral");
+		System.out.println("\n2- Ginecologista");
+		System.out.println("\n3- Urologista");
+		System.out.println("\n4- Cardiologista");
+	}
+	
+	public void menuRegiao()
+	{
+		System.out.println("\n====        MENU DE REGIÕES       ====");
+		System.out.println("\nEscolha a região onde mora: ");
+		System.out.println("\n1- Centro");
+		System.out.println("\n2- Zona Norte");
+		System.out.println("\n3- Zona Sul");
+		System.out.println("\n4- Zona Leste");
+		System.out.println("\n5- Zona Oeste");
+		System.out.println("\n6- Região Metropolitana");
 	}
 
-	public void setPrimeiroNome(String primeiroNome) {
-		this.primeiroNome = primeiroNome;
+	public String getNome() {
+		return nome;
 	}
 
-	public String getSegundoNome() {
-		return segundoNome;
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 
-	public void setSegundoNome(String segundoNome) {
-		this.segundoNome = segundoNome;
+	public String getSobrenome() {
+		return sobrenome;
 	}
 
-	public String getUltimoNome() {
-		return ultimoNome;
-	}
-
-	public void setUltimoNome(String ultimoNome) {
-		this.ultimoNome = ultimoNome;
+	public void setSobrenome(String sobrenome) {
+		this.sobrenome = sobrenome;
 	}
 
 	public int getRegiao() {
@@ -49,13 +59,15 @@ public class Cadastro {
 		this.regiao = regiao;
 	}
 
-	public int getTelefone() {
+	public String getTelefone() {
 		return telefone;
 	}
 
-	public void setTelefone(int telefone) {
+	public void setTelefone(String telefone) {
 		this.telefone = telefone;
 	}
+
+
 	
 	
 
