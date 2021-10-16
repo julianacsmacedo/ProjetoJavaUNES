@@ -15,6 +15,12 @@ public class Cadastro {
 		this.telefone = telefone;
 	}
 	
+	public void menu()
+	{
+		System.out.println("\nDeseja consultar novamente: ");
+		System.out.println("\n1- SIM \t2- NÃO");
+	}
+	
 	public void menuEspecialidade()
 	{
 		System.out.println("\n1- Clínico Geral");

@@ -1,5 +1,7 @@
 package ProjetoJava;
 
+import java.util.Scanner;
+
 //import java.util.ArrayList;
 //import java.util.List;
 
@@ -7,6 +9,7 @@ public class Medicos extends Cadastro{
 	
 	private String crm;
 	private int especialidade;
+	
 			
 	public Medicos (String nome, String sobrenome, int regiao, int especialidade, String crm, 
 			String telefone)
@@ -200,6 +203,17 @@ public class Medicos extends Cadastro{
 	
 	public void switchRegiao(int op)
 	{
+		while(op<1 || op>6)
+		{
+			System.err.println("\n\tOPÇÃO INVÁLIDA!!");
+			System.out.println("\n\nPor favor, escolha novamente!");
+			menuRegiao();
+			System.out.println("Por favor, escolha a região onde mora: ");
+			Scanner leia = new Scanner(System.in);
+			op = leia.nextInt();
+			setRegiao(op);
+		}
+		
 		switch(op)
 		{
 		case 1:
@@ -227,7 +241,7 @@ public class Medicos extends Cadastro{
 			listaMedicos();
 			break;
 		default:
-			System.out.println("Escolha uma opção válida!!!");
+			return;
 		}
 	}
 }

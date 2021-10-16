@@ -14,6 +14,13 @@ public class TesteProjeto {
 		int op, ep;
 		
 		Scanner leia = new Scanner(System.in);
+		System.out.println("\t##     ## ##    ## ########  ######\r\n"
+				+ "\t##     ## ###   ## ##       ##    ##\r\n"
+				+ "\t##     ## ####  ## ##       ##\r\n"
+				+ "\t##     ## ## ## ## ######    ######\r\n"
+				+ "\t##     ## ##  #### ##             ##\r\n"
+				+ "\t##     ## ##   ### ##       ##    ##\r\n"
+				+ "\t #######  ##    ## ########  ######\r\n");
 		
 		System.out.println("***********************************************************************");
 		System.out.println("*                      SEJA BEM VINDE!!                               *");
@@ -29,7 +36,13 @@ public class TesteProjeto {
 		pac.setSobrenome(sobrenome);
 		System.out.println("Informe seu CPF: ");
 		cpf = leia.next();
-		pac.setCpf(cpf);
+		while(cpf.length()!= 11)
+		{
+			System.out.println("CPF Inválido!! \nPor favor digite novamente: ");
+			cpf = leia.next();
+			pac.setCpf(cpf.substring(0,3)+"."+cpf.substring(3,6)+"."+cpf.substring(6,9)+"-"+cpf.substring(9,11));
+		}
+		pac.setCpf(cpf.substring(0,3)+"."+cpf.substring(3,6)+"."+cpf.substring(6,9)+"-"+cpf.substring(9,11));
 		System.out.println("Informe a Data de Nascimento (dd/mm/aa): ");
 		dataNascimento= leia.next();
 		pac.setDataNascimento(dataNascimento);
@@ -60,34 +73,44 @@ public class TesteProjeto {
 		ep = leia.nextInt();
 		med.setEspecialidade(ep);
 		
-		switch(ep)
+		while (ep <1 || ep> 4)
 		{
-		case 1:
-			med.menuRegiao();
-			op = leia.nextInt();
-			med.setRegiao(op);
-			med.switchRegiao(op);
-			break;
-		case 2:
-			med.menuRegiao();
-			op = leia.nextInt();
-			med.setRegiao(op);
-			med.switchRegiao(op);
-			break;
-		case 3:
-			med.menuRegiao();
-			op = leia.nextInt();
-			med.setRegiao(op);
-			med.switchRegiao(op);
-			break;
-		case 4:
-			med.menuRegiao();
-			op = leia.nextInt();
-			med.setRegiao(op);
-			med.switchRegiao(op);
-			break;
+			System.err.println("\nOPÇÃO INVÁLIDA!!");
+			System.out.println("Por favor, escolha novamente!");
+			System.out.println("\n====        MENU DE ESPECIALIDADES        ====");
+			pac.menuEspecialidade();
+			System.out.println("\nEscolha a especialidade que deseja consultar: ");
+			ep = leia.nextInt();
+			med.setEspecialidade(ep);
 		}
 		
+			switch(ep)
+			{
+			case 1:
+				med.menuRegiao();
+				op = leia.nextInt();
+				med.setRegiao(op);
+				med.switchRegiao(op);
+				break;
+			case 2:
+				med.menuRegiao();
+				op = leia.nextInt();
+				med.setRegiao(op);
+				med.switchRegiao(op);
+				break;
+			case 3:
+				med.menuRegiao();
+				op = leia.nextInt();
+				med.setRegiao(op);
+				med.switchRegiao(op);
+				break;
+			case 4:
+				med.menuRegiao();
+				op = leia.nextInt();
+				med.setRegiao(op);
+				med.switchRegiao(op);
+				break;
+			}
 
 	}
 
