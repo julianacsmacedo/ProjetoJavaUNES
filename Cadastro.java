@@ -34,7 +34,12 @@ public class Cadastro {
 		System.out.println("\n5- Zona Oeste");
 		System.out.println("\n6- Região Metropolitana");
 	}
-
+	
+	public void info()
+	{
+		System.out.println("\n\n====    Médicos Disponíveis     ====");
+	}
+	
 	public String getNome() {
 		return nome;
 	}

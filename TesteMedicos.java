@@ -2,6 +2,7 @@ package ProjetoJava;
 
 import java.util.ArrayList;
 import java.util.Scanner;
+import javax.swing.JOptionPane;
 
 public class TesteMedicos {
 
@@ -10,25 +11,28 @@ public class TesteMedicos {
 		
 		Medicos med = new Medicos(null, null, 0, 0, null, null);
 				
-		String n1,n2, crm, tel;
+		String n1, n2, crm, tel;
 		int op, ep;
 		
 		Scanner leia = new Scanner(System.in);
 		
-		//Objeto Médicos
+		/*//Objeto Médicos
         Medicos med1 = new Medicos("Dr. André", "Mendes", 1, 1, "4658-3922", "773946/SP");
-        Medicos med2 = new Medicos("Dr. André", "Mendes", 1, 2, "4658-3922", "773946/SP");
-        Medicos med3 = new Medicos("Dr. André", "Mendes", 1, 2, "4658-3922", "773946/SP");
+        Medicos med2 = new Medicos("Dr. Vinicius", "Mendes", 1, 2, "4658-3922", "773946/SP");
+        Medicos med3 = new Medicos("Dr. André", "Mendes", 2, 2, "4658-3922", "773946/SP");
         Medicos med4 = new Medicos("Dr. André", "Mendes", 1, 3, "4658-3922", "773946/SP");
         
         //ARRAYLIST 
-        ArrayList<Medicos> medicos = new ArrayList<>();
+        ArrayList<Medicos> medicos = new ArrayList<Medicos>();
         
         //ADICIONAMENTO OBJETOS DENTRO DO ARRAYLIST
         medicos.add(med1);
         medicos.add(med2);
         medicos.add(med3);
         medicos.add(med4);
+        
+        System.out.println(medicos);
+        */
 			
 		System.out.println("=======================================================================");
 		System.out.println("=                       SEJA BEM VINDE!!                              =");
