@@ -32,13 +32,13 @@ public class Cadastro {
 	public void menuRegiao()
 	{
 		System.out.println("\n====        MENU DE REGIÕES       ====");
-		System.out.println("\nEscolha a região onde mora: ");
 		System.out.println("\n1- Centro");
 		System.out.println("\n2- Zona Norte");
 		System.out.println("\n3- Zona Sul");
 		System.out.println("\n4- Zona Leste");
 		System.out.println("\n5- Zona Oeste");
 		System.out.println("\n6- Região Metropolitana");
+		System.out.println("\nEscolha a região onde mora: ");
 	}
 	
 	public void info()
